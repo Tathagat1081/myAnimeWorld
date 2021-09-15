@@ -1,13 +1,12 @@
-// import logo from './logo.svg';
 import './App.css';
-import UserComponent from './components/UserComponent';
-import WelcomePage from './components/WelcomePage';
+import Dashboard from './components/Dashboard/Dashboard.jsx';
+import Routes from './components/Router.jsx';
 
 function App() {
   return (
-    <div className="App">
-        
-        <WelcomePage/>
+    <div className="App">  
+        <Dashboard/>
+        <Routes/>     
     </div>
   );
 }
