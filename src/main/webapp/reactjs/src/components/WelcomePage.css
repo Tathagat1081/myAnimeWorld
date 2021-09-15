@@ -1,0 +1,42 @@
+.root {
+    max-width: "400";
+    display: "inline-grid";
+    margin: "25px 50px 75px 100px";
+    }
+.bg {
+    background: '#74948c';
+    }
+.img {
+    height: '160px';
+    width: '160px';
+    margin:"auto";
+   }
+.container {
+    max-width: "350px";
+    flex: "auto";
+    background:"#b3b3b3";       
+    }
+.intro {
+    margin: "40px 10px 10px 10px";
+    display:"flex";
+    letter-spacing: '0.15em';
+    line-height: '2';
+    font-family: 'cursive';
+    }
+.secondContainer {
+    max-width: "350px";
+    flex: "auto";
+    background:"#b3b3b3";
+    }
+.logo {
+    margin: "0px 0px 0px 0px";
+    background:"#009688";
+    }   
+.tabContainer {
+    max-width: "100px";
+    flex: "auto";
+    background:"#009688";
+    }
+.ingredients {
+    background:"#DCDCDC";
+    }
