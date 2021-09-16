@@ -8,7 +8,8 @@ import MonsterImage from '../../resources/MonsterImage.jpg';
 import GenreCard from './GenreCard';
 
 const useStyles = makeStyles((theme) => ({
-  shounenRoot: {
+  mysteryRoot: {
+    background: "#8baba3",
     display: 'flex',
     '& > *': {
       margin: theme.spacing(3),
@@ -27,36 +28,41 @@ const Mystery = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const classes = useStyles();
   return (
-    <div className={classes.shounenRoot}>
+    <div className={classes.mysteryRoot}>
       <GenreCard
         alt="case closed"
         image={DetectiveConanImage}
         title="case closed"
         name="Detective Conan"
+        rating="5"
       />
       <GenreCard
         alt="Kira"
         image={DeathNoteImage}
         title="Kira"
         name="Death Note"
+        rating="5"
       />
       <GenreCard
         alt="Mad scientisto"
         image={SteinsGateImage}
         title="Mad scientisto"
         name="Steins Gate"
+        rating="5"
       />
       <GenreCard
         alt="Mystery Girl"
         image={AnotherImage}
         title="Mystery Girl"
         name="Another"
+        rating="3"
       />
       <GenreCard
         alt="Are all lives equal"
         image={MonsterImage}
         title="Are all lives equal"
         name="Monster"
+        rating="5"
       />
     </div>
   )
