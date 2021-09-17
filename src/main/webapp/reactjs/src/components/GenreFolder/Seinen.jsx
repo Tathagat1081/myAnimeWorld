@@ -13,6 +13,8 @@ import PopUp from './PopUp';
 
 const useStyles = makeStyles((theme) => ({
   seinenRoot: {
+    
+    paddingBottom: "48px",
     background: "#8baba3",
     display: 'flex',
     '& > *': {

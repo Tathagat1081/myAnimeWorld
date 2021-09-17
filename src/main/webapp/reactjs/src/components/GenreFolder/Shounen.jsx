@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
     shounenRoot: {
+        paddingBottom:"48px",
         background: "#8baba3",
         display: 'flex',
         '& > *': {
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Shounen = () => {
     const classes = useStyles();
-    const handleClick=(name,detail)=>{
+    const handleClick= (name,detail)=>{
            setPopUpOpen(true);
            setTitle(name);
            setDescription(detail);

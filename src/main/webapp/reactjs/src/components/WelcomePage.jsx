@@ -69,16 +69,13 @@ const classes = useStyles();
             Beauty of Anime
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Anime is a beautiful way of story telling with genres like shounen,seinen,isekai,slice of life and many others which can give you a different type of feel from your daily dose of entertainment.
+            Anime is a beautiful way of story telling with genres like Shounen,Seinen,Isekai,Slice of life and many others which can give you a different type of feel from your daily dose of entertainment.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary" onClick={() => setDrawerOpen(true)}>
           About Me
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
         </Button>
       </CardActions>
     </Card> 
@@ -90,7 +87,7 @@ const classes = useStyles();
        <Typography variant="body2" color="textPrimary" component="p" className= {classes.intro}>
           <div>
               <div>
-          Hi,welcome to my Anime world.
+          Hi,Welcome to my Anime world.
           </div>
           <div>
           I am Tathagat,creator of this page.

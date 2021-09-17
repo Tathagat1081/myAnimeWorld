@@ -9,6 +9,7 @@ import GenreCard from './GenreCard';
 
 const useStyles = makeStyles((theme) => ({
     isekaiRoot: {
+        paddingBottom:"48px",
         background: "#8baba3",
         display: 'flex',
         '& > *': {

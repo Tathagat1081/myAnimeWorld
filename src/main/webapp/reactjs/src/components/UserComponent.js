@@ -1,5 +1,5 @@
 import React from 'react';
-import UserService from '../services/UserService';
+import AnimeService from '../services/UserService';
 
 class UserComponent extends React.Component{
 
@@ -11,7 +11,7 @@ constructor(props)
     }
 }
 componentDidMount(){
-    UserService.getGreeting().then((response) =>  {
+    AnimeService.getGreeting().then((response) =>  {
         console.log({response});
         this.setState({greeting:response.data});
      });

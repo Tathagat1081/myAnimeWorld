@@ -9,20 +9,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin(origins= "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-public class AnimeImageController
-{
+public class AnimeImageController {
     @Autowired
     public AnimeServices animeServices;
-        @RequestMapping("/hello")
-        public String sayHi()
-        {
-            return "Hi,welcome to my Anime world.I am Tathagat,creator of this page.I am a third year Engineering student pursuing BTech in Computer Science from N.I.T Andhra Pradesh.My hobbies are singing,watching Anime. ";
-        }
-        @RequestMapping("/detail")
-        public List<AnimeDetail> getAnimeDetails()
-        {
-           return  animeServices.getAnimeDetail();
-        }
+
+    @RequestMapping("/hello")
+    public String sayHi() {
+        return animeServices.sayHello();
+    }
+
+    @RequestMapping("/detail")
+    public List<AnimeDetail> getDetail() {
+        return animeServices.getAnimeDetail();
+    }
+    @RequestMapping("/favourites")
+    public List<AnimeDetail>  getFavourites(){
+        return animeServices.getFavourites();
+    }
 }
