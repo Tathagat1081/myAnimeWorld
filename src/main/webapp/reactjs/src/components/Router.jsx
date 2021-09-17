@@ -9,6 +9,9 @@ import Isekai from './GenreFolder/Isekai';
 import SliceOfLife from './GenreFolder/SliceOfLife';
 import Mystery from './GenreFolder/Mystery';
 import Thriller from './GenreFolder/Thriller';
+import Ost from "./Ost";
+import Favourites from "./Favourites";
+import AboutUs from "./AboutUs";
 
 const Routes = () => 
  {
@@ -23,6 +26,9 @@ const Routes = () =>
                     <Route path="/Genre4" component={SliceOfLife}/>
                     <Route path="/Genre5" component={Mystery}/>
                     <Route path="/Genre6" component={Thriller}/>
+                    <Route path="/OST" component={Ost}/>
+                    <Route path="/Favourites" component={Favourites}/>
+                    <Route path="/AboutUs" component={AboutUs}/>
                     
                 </Switch>
             </Router>

@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Typography, IconButton, AppBar, Toolbar, Button } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ItemData from "../../resources/Logo.jpg";
 import { Drawer, Container, List, ListItem, ListItemText, Collapse } from '@material-ui/core';
+import ListItemButton from '@mui/material/ListItemButton';
 import { makeStyles } from '@material-ui/core/styles';
 import history from '../History';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+
 
 const useStyles = makeStyles((theme) => ({
   app:
@@ -27,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
   secondContainer:
   {
     maxwidth: theme.spacing(2),
-    flex: "auto",
-    background: "#b3b3b3",
+    display:"contents"
+    
   },
   logo: {
     background: "#009688",
@@ -57,6 +60,16 @@ const Dashboard = () => {
     else if (text === 'Thriller')
       history.push('Genre6')
   };
+  const getOptionPage = (text) => {
+    if (text === 'Genre')
+      setSubListOpen(!subListOpen)
+    if (text === 'OST')
+      history.push('/OST')
+    else if (text === 'Favourites')
+      history.push('/favourites')
+    else if (text === 'About Us')
+      history.push('/AboutUs')
+  };
   const classes = useStyles();
   return (
     <div>
@@ -84,16 +97,14 @@ const Dashboard = () => {
         <Container className={classes.secondContainer}>
           <div>
             <List>
-              {['Genre', 'OST', 'Favourites', 'About Us'].map((text) => (
+              {['Genre', 'OST', 'Favourites'].map((text) => (
                 <div>
-                  <ListItem key={text}>
+                  <ListItemButton key={text} onClick={() => getOptionPage(text)}>
                     <ListItemText primary={text} />
                     {text === 'Genre' && (
-                      <IconButton onClick={() => setSubListOpen(!subListOpen)}>
-                        <ArrowDropDownIcon />
-                      </IconButton>
+                      subListOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />
                     )}
-                  </ListItem>
+                  </ListItemButton>
                   {text === 'Genre' && (
                     <Collapse in={subListOpen} timeout="auto" unmountOnExit>
                       <List>
